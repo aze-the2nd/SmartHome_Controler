@@ -1,0 +1,59 @@
+@startuml
+
+class SmartHomeController
+{
+- rooms : std::vector<<std::unique_ptr<Room*>>
++ bool addRoom(Room*)
++ bool removeRoom(Room*)
++ void activateAll()
++ void deactivateAll()
+}
+
+SmartHomeController "1" o-- "*" Room : manages
+
+class Room
+{
+- name : std::string
+- devices : std::vector<std::unique_ptr<Device*>>
++ bool addDevice(Device*)
++ bool removeDevice(Device*)
++ void activateAll()
++ void deactivateAll()
+
+}
+
+
+interface ISwitchable 
+{
++ virtual void turnOn()
++ virtual void turnOff()
+}
+
+
+
+
+class Device implements ISwitchable
+{
+
+}
+
+
+class Sensor extends Device
+
+class InfraredSensor extends Sensor
+class DoorSensor extends Sensor
+class MovementSensor extends Sensor
+
+
+class Lamp extends Device
+
+class SmartLamp extends Lamp
+class EntranceLamp extends Lamp
+
+class DoorOpener extends Device
+
+
+
+Room "Kitchen" o-- "*" Device : contains
+
+@enduml
