@@ -15,8 +15,8 @@ class Room
         const std::string& roomName, 
         const std::uint8_t& roomID);
 
-    bool addDevice(std::unique_ptr<Device>);
-    bool removeDevice(std::unique_ptr<Device>);
+    bool addDevice(std::unique_ptr<Device>&);
+    bool removeDevice(std::unique_ptr<Device>&);
     void activateAllDevices();
     void deactivateAllDevices();
     std::uint8_t getDeviceID(const std::unique_ptr<Device>&) const;
@@ -25,6 +25,7 @@ class Room
     double getDevicePowerUsage(const std::unique_ptr<Device>&) const;
     double getRoomPowerUsage() const;
     std::string getRoomName() const;
+    std::uint8_t getRoomID() const;
 
 
 
