@@ -8,11 +8,16 @@
 #include "../../include/core/ISmartHomeInterface.hpp"
 #include "../../include/core/SmartHomeSystem.hpp"
 
+
 bool SmartHomeSystem::initialize()
 {
     bool success = false;
 
+
+   // pseudo data-import
     
+    controller->addRoom(room);
+   // 
 
     return success;
 }

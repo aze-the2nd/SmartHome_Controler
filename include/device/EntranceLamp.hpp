@@ -11,7 +11,7 @@ class EntranceLamp : public Lamp, public MovementSensor
     EntranceLamp(
         const std::string& name, 
         const std::string& artNum, 
-        const std::uint8_t id, 
+        const std::uint32_t& id, 
         double powerUsage,
         bool isOn,
         bool isShining,
@@ -20,9 +20,4 @@ class EntranceLamp : public Lamp, public MovementSensor
     void doShineIfMovement();
     ~EntranceLamp() final = default;
 
-    private:
-    std::string name;
-    std::string artNum;
-    double powerUsage;
-    std::uint8_t id;
 };

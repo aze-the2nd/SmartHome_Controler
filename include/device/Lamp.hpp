@@ -10,7 +10,7 @@ class Lamp : public Device
     explicit Lamp(
         const std::string& name, 
         const std::string& artNum, 
-        const std::uint8_t id, 
+        const std::uint32_t& id, 
         double powerUsage,
         bool isOn,
         bool isShining);
@@ -20,7 +20,7 @@ class Lamp : public Device
     double getPowerUsage() const override;
     std::string getDeviceName() const override;
     std::string getDeviceArtNum() const override;
-    std::uint8_t getDeviceID() const override;
+    std::uint32_t getDeviceID() const override;
     bool isDeviceOn() const override;
     ~Lamp() override = default;
 

@@ -15,4 +15,12 @@ class SmartHomeSystem : public ISmartHomeInterface
     bool run() override;
 
     ~SmartHomeSystem()  = default;
+
+    private:
+    // auto control = std::make_unique<SmartHomeController>();
 };
+
+
+    auto controller = std::make_unique<SmartHomeController>();
+    auto room = std::make_unique<Room>("Kitchen", 5264524766987587);
+    

@@ -12,7 +12,7 @@ class Device : ISwitchable
     Device(
         const std::string& name, 
         const std::string& artNum, 
-        const std::uint8_t id, 
+        const std::uint32_t& id, 
         double powerUsage,
         bool isOn)
         : deviceName_(name),
@@ -22,7 +22,7 @@ class Device : ISwitchable
         isOn_(isOn)
         {}
 
-    std::uint8_t deviceID_;
+    std::uint32_t deviceID_;
     std::string deviceName_;
     std::string deviceArtNum_;
     double powerUsage_;
@@ -35,7 +35,7 @@ class Device : ISwitchable
     virtual double getPowerUsage() const {return powerUsage_; };
     virtual std::string getDeviceName() const { return deviceName_; };
     virtual std::string getDeviceArtNum() const { return deviceArtNum_; };
-    virtual std::uint8_t getDeviceID() const { return deviceID_; };
+    virtual std::uint32_t getDeviceID() const { return deviceID_; };
     virtual bool isDeviceOn() const { return isOn_; };
     virtual ~Device() = default;
 

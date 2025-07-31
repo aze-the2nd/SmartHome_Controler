@@ -18,7 +18,7 @@ class SmartHomeController// : ISendNotification
     bool removeRoom(std::unique_ptr<Room>&);
     void activateAll();
     void deactivatAll();
-    std::uint8_t getRoomID(std::unique_ptr<Room>&) const;
+    std::uint32_t getRoomID(std::unique_ptr<Room>&) const;
     std::string getRoomName(std::unique_ptr<Room>&) const;
     double getHouseholdPower();
 

@@ -7,22 +7,26 @@
 #include "include/core/ISmartHomeInterface.hpp"
 #include "include/core/SmartHomeSystem.hpp"
 
+
 int main()
 {
-    std::unique_ptr<ISmartHomeInterface> system = std::make_unique<SmartHomeSystem>();
 
 
-    // define rooms
+    std::unique_ptr<ISmartHomeInterface> controller = std::make_unique<SmartHomeSystem>();
 
-
-
-
-
-
-
-
-
-
+    
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+

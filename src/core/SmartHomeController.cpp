@@ -49,7 +49,7 @@ void SmartHomeController::deactivatAll()
 }
 
 
-std::uint8_t SmartHomeController::getRoomID(std::unique_ptr<Room>& room) const
+std::uint32_t SmartHomeController::getRoomID(std::unique_ptr<Room>& room) const
 {
     return room->getRoomID();
 }

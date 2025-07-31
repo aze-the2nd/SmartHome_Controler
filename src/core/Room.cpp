@@ -9,7 +9,7 @@
 
 Room::Room(
     const std::string& roomName,
-    const std::uint8_t& roomID)
+    const std::uint32_t& roomID)
     : roomName_(roomName),
     roomID_(roomID) {}
 
@@ -24,8 +24,11 @@ Room::Room(
         auto it = std::remove_if(
             devices_.begin(), 
             devices_.end(), 
-            [&](const std::unique_ptr<Device>& d) // -> Lambda-function
-            { 
+            [&](const std::unique_ptr<Device>& d) 
+        /*  Lambda-function - in this case it returns 
+            the true/false for the predicate, to decide 
+            wheter to remove/not remoce data in the container*/
+            {
                 return d->getDeviceName() == device->getDeviceName();
             });
 
@@ -54,7 +57,7 @@ Room::Room(
         }
     }
 
-    std::uint8_t Room::getDeviceID(const std::unique_ptr<Device>& device) const
+    std::uint32_t Room::getDeviceID(const std::unique_ptr<Device>& device) const
     {
         if (!device) 
         {
@@ -102,4 +105,4 @@ Room::Room(
     }
 
     std::string Room::getRoomName() const { return roomName_; }
-    std::uint8_t Room::getRoomID() const { return roomID_; }
+    std::uint32_t Room::getRoomID() const { return roomID_; }

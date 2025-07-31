@@ -10,7 +10,7 @@ class MovementSensor : Sensor
     MovementSensor(
         const std::string& name, 
         const std::string& artNum, 
-        const std::uint8_t id, 
+        const std::uint32_t& id, 
         double powerUsage,
         bool isOn,
         bool isMovement);

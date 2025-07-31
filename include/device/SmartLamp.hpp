@@ -10,7 +10,7 @@ class SmartLamp : public Lamp
     SmartLamp(
         const std::string& name, 
         const std::string& artNum, 
-        const std::uint8_t id, 
+        const std::uint32_t& id, 
         double powerUsage,
         bool isOn,
         bool isShining);
@@ -23,10 +23,5 @@ class SmartLamp : public Lamp
     void blink();
     ~SmartLamp() final = default;
 
-    private:
-    std::string name;
-    std::string artNum;
-    double powerUsage;
-    std::uint8_t id;
 
 };
